@@ -44,7 +44,7 @@ const Actions = styled.div`
 export default ({
   heading = (
     <>
-      ValuePlan - Book a train now,
+      NRC - Book a train now,
       <wbr />
       <br />
       <span tw="text-primary-500">anywhere you are.</span>
