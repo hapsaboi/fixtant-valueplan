@@ -8,7 +8,8 @@ import { useAuth } from '../../contexts/AuthContext';
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/Icon Black.svg";
+import logoText from "../../images/Text Black.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -118,7 +119,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      Train Book
+      <img src={logoText} style={{width:"250px"}} alt="logo" />
     </LogoLink>
   );
 

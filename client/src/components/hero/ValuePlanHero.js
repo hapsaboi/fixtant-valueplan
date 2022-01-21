@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import repair from '../../images/repair2.svg';
 
 import Header, { LogoLink } from "../headers/light.js";
 
@@ -20,8 +21,8 @@ const Container = tw.div`relative -mx-8 -mt-8`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row bg-gray-100`;
 const LeftColumn = tw.div`ml-8 mr-8 xl:pl-10 py-8`;
 const RightColumn = styled.div`
-  background-image: url("https://media.premiumtimesng.com/wp-content/files/2016/08/Railway.jpg");
-  ${tw`bg-green-500 bg-cover bg-center xl:ml-24 h-96 lg:h-auto lg:w-1/2 lg:flex-1`}
+  background-image: url(${repair}); background-repeat: no-repeat;
+  ${tw`bg-center xl:ml-24 h-96 lg:h-auto lg:w-1/2 lg:flex-1`}
 `;
 
 const Content = tw.div`mt-24 lg:mt-24 lg:mb-24 flex flex-col sm:items-center lg:items-stretch`;
@@ -44,17 +45,17 @@ const Actions = styled.div`
 export default ({
   heading = (
     <>
-      ValuePlan - GET,
+      Value Plan - Secure,
       <wbr />
       <br />
-      <span tw="text-primary-500">anywhere you are.</span>
+      <span tw="text-primary-500">your device first.</span>
     </>
   ),
-  description = "A Train E-ticketing system that allows you to effectively book your train flights with effectiveness and ease. We assure you that you will always enjoy your stay with us.",
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   primaryActionUrl = "#",
   primaryActionText = "Sign Up",
   secondaryActionUrl = "#",
-  secondaryActionText = "Book a Train"
+  secondaryActionText = "Insert Code"
 }) => {
   return (
     <Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch,Redirect } from 'react-router-dom';
-import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
+import ValuePlanLandingPage from "demos/ValuePlanLandingPage.js";
 import { useAuth } from './contexts/AuthContext';
 
 import RouteClient from './RouteClient'
@@ -29,7 +29,7 @@ function RouterComp() {
                 
                     <Switch>
                         <>
-                        <Route exact path="/" component={HotelTravelLandingPage} />     
+                        <Route exact path="/" component={ValuePlanLandingPage} />     
                         <Route path="/client" render={(props) => <RouteClient {...props} />} />
                         <Redirect to="/" />
                         </>
@@ -38,7 +38,7 @@ function RouterComp() {
                </>
             :
                 <Switch>
-                    <Route exact path="/" component={HotelTravelLandingPage} /> 
+                    <Route exact path="/" component={ValuePlanLandingPage} /> 
                     <Route path="/signup" component={SignupPage} />  
                     <Route path="/login" component={LoginPage} /> 
                     {/* <Redirect to="/" /> */}
