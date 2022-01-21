@@ -14,7 +14,7 @@ import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefc
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
 
 import repairImage from '../images/repair.svg';
-import phone from '../images/phone.svg';
+import phoneImg from '../images/phone.svg';
 
 
 export default () => {
@@ -34,7 +34,7 @@ export default () => {
       />
       <MainFeature
         subheading={<Subheading>Quality Work</Subheading>}
-        imageSrc={phone}
+        imageSrc={phoneImg}
         imageBorder={true}
         imageDecoratorBlob={true}
       />
