@@ -17,9 +17,10 @@ const UserSchema = new Schema({
     },
     type:{
         type:String,
-        default:"client"
+        default:"admin"
     },
     dob: {type: String},
+    code: {type: String},
     register_date: {
         type: Date,
         default: Date.now,

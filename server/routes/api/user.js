@@ -9,6 +9,10 @@ const {auth} = require('../../middleware/auth');
 // User Model
 const Users = require('../../models/User');
 
+
+// User Model
+const Code = require('../../models/Code');
+
 //@routes PUT api/user/editProfile
 //@desc update user
 //@response - status: true or false | error
@@ -30,7 +34,7 @@ router.patch('/edit_profile', auth, async (req, res) => {
 //@desc Register new user
 //@access public
 router.post('/add_user', async (req, res) => {
-	const { name, email, phone, password, dob } = req.body;
+	const { name, email, phone, password, dob,code } = req.body;
 
 	//Simple Validation
 	if (!name || !email || !phone || !password ||!dob) {
@@ -43,7 +47,7 @@ router.post('/add_user', async (req, res) => {
 			if (user) return res.status(400).send({ msg: 'User Already Exist' });
 
 			//creating new user
-			const newUser = new Users({ name, email, phone, password,dob });
+			const newUser = new Users({ name, email, phone, password,dob,code });
 
 			//Create salt and hash
 			const salt = await bcrypt.genSalt(10);
@@ -52,14 +56,25 @@ router.post('/add_user', async (req, res) => {
 
 			try {
 				newUser.save();
+				if(code){
+					found_code = await Code.findOne({ code });
+					if(found_code.status=="available"){
+						found_code.status="used";
+						found_code.save();
+					}
+					else{
+						return res.status(400).send({ msg: "Error occured with code, please try again", status:false });
+					}
+				}
 				return res
 					.status(200)
-					.send({ msg: 'Account created successfuly!' });
+					.send({ msg: 'Account created successfully!, please sign in to continue' });
 			} catch (error) {
+				console.log(error);
 				return res.status(500).send({ msg: 'Account Not Created!' });
 			}
 		} catch (err) {
-			res.status(400).json({ msg: err });
+			res.status(400).json({ msg: err, status:false });
 		}
 	}
 
@@ -101,19 +116,6 @@ router.get('/loggedIn', async (req, res) => {
 	} catch (e) {
 		res.status(501).send(e);
 	}
-});
-
-
-//@routes GET api/users/logout
-//@desc Logout a user
-router.get('/logout', async (req, res) => {
-	res
-		.cookie('token', '', 
-		{
-			httpOnly: true,
-			expires: new Date(0)
-		})
-		.send();
 });
 
 

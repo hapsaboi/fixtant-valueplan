@@ -55,6 +55,12 @@ export const user = {
 	editProfile: `${BackEnd}/api/user/edit_profile`,
 	showAllUsers: `${BackEnd}/api/user/show_all_users`
 };
+
+export const code = {
+	checkCode: `${BackEnd}/api/code/checkcode`,
+	showAllUsers: `${BackEnd}/api/user/show_all_users`
+};
+
 export const authenticate = {
 	//takes in token as http cookie
 	//data : [verifyToken]

@@ -7,20 +7,20 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import {css} from "styled-components/macro"; //eslint-disable-line
 import illustration from "images/login-illustration.svg";
-//import logo from "images/logo.svg";
+import logo from "../images/Full Black.svg";
 import { ReactComponent as LoginIcon } from "feather-icons/dist/icons/log-in.svg";
 import Axios from 'axios';
 import { authenticate } from '../data/api';
 import { useAuth } from '../contexts/AuthContext'; 
 
 
-const Container = tw(ContainerBase)`min-h-screen bg-primary-900 text-white font-medium flex justify-center -m-8`;
+const Container = tw(ContainerBase)`min-h-screen bg-primary-500 text-white font-medium flex justify-center -m-8`;
 const Content = tw.div`max-w-screen-xl m-0 sm:mx-20 sm:my-16 bg-white text-gray-900 shadow sm:rounded-lg flex justify-center flex-1`;
 const MainContainer = tw.div`lg:w-1/2 xl:w-5/12 p-6 sm:p-12`;
 const LogoLink = tw.a``;
 const LogoImage = tw.img`h-12 mx-auto`;
-const MainContent = tw.div`mt-12 flex flex-col items-center`;
-const Heading = tw.h1`text-2xl xl:text-3xl font-extrabold`;
+const MainContent = tw.div`flex flex-col items-center`;
+const Heading = tw.h1`text-2xl xl:text-3xl font-bold`;
 const FormContainer = tw.div`w-full flex-1 mt-8`;
 
 const Form = tw.form`mx-auto max-w-xs`;
@@ -45,7 +45,7 @@ function Login() {
   let data = {
     logoLinkUrl : "#",
     illustrationImageSrc : illustration,
-    headingText : "Sign In To Train Book",
+    headingText : "Sign In Fixtant - Value Plan",
     submitButtonText : "Sign In",
     SubmitButtonIcon : LoginIcon,
     forgotPasswordUrl : "#",
@@ -86,10 +86,10 @@ function Login() {
       <Content>
         <MainContainer>
           <LogoLink href={data.logoLinkUrl}>
-            <LogoImage src={data.logo} />
+            <LogoImage src={logo} />
           </LogoLink>
           <MainContent>
-            <Heading>{data.headingText}</Heading>
+            <Heading  style={{ textAlign: 'center' }}>{data.headingText}</Heading>
             <h4 style={{ color: 'red', textAlign: 'center',paddingTop:"-100px" }}>{message}</h4>
             <FormContainer>
               <Form>

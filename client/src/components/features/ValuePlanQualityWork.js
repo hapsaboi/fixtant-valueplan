@@ -47,7 +47,7 @@ export default ({
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "We combined the expertise of hardware engineers, software engineers and financial advisors to create this functional service. The infrastructure and product is brought to life by the numerous repair engineers and merchants we partner with. Community is built by Community. Join the premier smartphone community today.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "#",
   imageSrc = TeamIllustrationSrc,

@@ -10,7 +10,7 @@ class Footer extends Component {
             <br />
             <p className="text-center">
               © {new Date().getFullYear()}{" "}
-              <span>TrainBook</span>
+              <span>Fixtant - Value Plan</span>
             </p>
           </nav>
         </Container>

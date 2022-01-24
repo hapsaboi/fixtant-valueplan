@@ -7,7 +7,7 @@ import Features from "components/features/ThreeColWithSideImage.js";
 import MainFeature from "components/features/ValuePlanQualityWork";
 import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureWithSteps from "components/features/ValuePlanSteps.js";
-import FAQ from "components/faqs/SingleCol.js";
+//import FAQ from "components/faqs/SingleCol.js";
 import Footer from "components/footers/ValuePlanFooter";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
@@ -28,7 +28,7 @@ export default () => {
         subheading={<Subheading>Features</Subheading>}
         heading={
           <>
-            We have Amazing <HighlightedText>Service.</HighlightedText>
+            Integrity and <HighlightedText>Service.</HighlightedText>
           </>
         }
       />
@@ -54,7 +54,7 @@ export default () => {
         subheading={<Subheading>VALUES</Subheading>}
         heading={
           <>
-            We Always Abide by Our <HighlightedText>Principles.</HighlightedText>
+            We Lead With Our <HighlightedText>Principles.</HighlightedText>
           </>
         }
         imageSrc={prototypeIllustrationImageSrc}
@@ -74,7 +74,7 @@ export default () => {
           }
         ]}
       />
-      <FAQ
+      {/* <FAQ
         subheading={<Subheading>FAQS</Subheading>}
         heading={
           <>
@@ -113,7 +113,7 @@ export default () => {
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           }
         ]}
-      />
+      /> */}
       <Footer />
     </AnimationRevealPage>
   );

@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: ["http://localhost:3000","https://gas.app"],
+		origin: ["http://localhost:3000","https://api.myfixtant.com"],
 		credentials: true
 	})
 );
@@ -21,7 +21,7 @@ app.use('/api/product', require('./routes/api/product'));
 app.use('/api/order', require('./routes/api/order'));
 app.use('/api/user', require('./routes/api/user'));
 app.use('/api/auth', require('./routes/api/auth'));
-
+app.use('/api/code', require('./routes/api/code'));
 
 const PORT = process.env.PORT || process.env.LocalPort;
 

@@ -58,7 +58,7 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 `;
 
-export default ({ cards = null, heading = "Amazing Features", subheading = "Features", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }) => {
+export default ({ cards = null, heading = "Amazing Features", subheading = "Features", description = "Did you know that Fixtant means 'Instant Fix'? These are the features our services have to offer.." }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) imageSrc - the image shown at the top of the card
@@ -71,13 +71,18 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
     {
       imageSrc: ShieldIconImage,
       title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security."
+      description: "Enjoy protection of your device while we keep your info private ."
     },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
+    { imageSrc: SupportIconImage, title: "24/7 Support" ,
+      description: "Call, text, email us anytime of the day. We'll reply back."},
+    { imageSrc: CustomizeIconImage, title: "Customizable", 
+      description:"Protect your wallet on your own terms. Only pay what you need." },
+    { imageSrc: ReliableIconImage, title: "Reliable",
+      description:"If lava melts your phone, you'll still get your claim."  },
+    { imageSrc: FastIconImage, title: "Fast",
+      description:"Within 24 hours, your phone will be fixed."  }, 
+    { imageSrc: SimpleIconImage, title: "Easy",
+      description:"No paperwork to fill. Show us the broken phone and we'll handle the rest."  },
   ];
 
   if (!cards) cards = defaultCards;

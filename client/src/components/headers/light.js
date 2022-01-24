@@ -98,8 +98,8 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLinks = [
     <NavLinks key={1}>
+      <NavLink as={Link} to="fixtant">Fixtant</NavLink>
       <NavLink as={Link} to="about">About</NavLink>
-      <NavLink as={Link} to="#">Book</NavLink>
       {Object.keys(userDetail).length>0?
           <>
             <NavLink as={Link} to="/client/bookings">My Bookings</NavLink>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import repair from '../../images/repair2.svg';
 
+import { Link } from "react-router-dom";
 import Header, { LogoLink } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -45,16 +46,16 @@ const Actions = styled.div`
 export default ({
   heading = (
     <>
-      Value Plan - Secure,
+      Value Plan,
       <wbr />
       <br />
-      <span tw="text-primary-500">your device first.</span>
+      <span tw="text-primary-500">No More Costly Repairs.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  primaryActionUrl = "#",
+  description = "Did you know you could cut repair costs in half? Our Value Plan relieves stress and anxiety for smart phone owners. Accidents happen. Sign up below and save thousands on your next phone repair. We are here to help.",
+  primaryActionUrl = "signup",
   primaryActionText = "Sign Up",
-  secondaryActionUrl = "#",
+  secondaryActionUrl = "codeverify",
   secondaryActionText = "Insert Code"
 }) => {
   return (
@@ -66,12 +67,12 @@ export default ({
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
             <Actions>
-              <a href={primaryActionUrl} className="action primaryAction">
+              <Link tp={primaryActionUrl} className="action primaryAction">
                 {primaryActionText}
-              </a>
-              <a href={secondaryActionUrl} className="action secondaryAction">
+              </Link>
+              <Link to={secondaryActionUrl} className="action secondaryAction">
                 {secondaryActionText}
-              </a>
+              </Link>
             </Actions>
           </Content>
         </LeftColumn>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, NavLink } from "react-router-dom";
-import logo from '../../assets/img/trainbook.png';
+import logo from '../../../../images/Full White.svg';
 import { Nav } from "react-bootstrap";
 
 function Sidebar({ color, image, routes }) {
@@ -19,16 +19,15 @@ function Sidebar({ color, image, routes }) {
             href="#"
             className="simple-text logo-mini mx-1"
           >
-            <div className="logo-img">
+            <div className="logo-im">
               <img
                 src={logo}
+                style={{width:"300px"}}
                 alt="..."
               />
             </div>
           </button>
-          <button className="simple-text" href="#">
-            Train Book
-          </button>
+          
         </div>
         <Nav>
           {routes.map((prop, key) => {

@@ -7,6 +7,7 @@ import RouteClient from './RouteClient'
 import AdminLayout from './views/admin/layouts/Admin'
 
 import LoginPage from "pages/Login.js";
+import CodeVerify from "pages/CodeVerify.js";
 import SignupPage from "pages/Signup.js";
 //import MainLandingPage from "MainLandingPage.js";
 
@@ -39,6 +40,7 @@ function RouterComp() {
             :
                 <Switch>
                     <Route exact path="/" component={ValuePlanLandingPage} /> 
+                    <Route path="/codeverify" component={CodeVerify} /> 
                     <Route path="/signup" component={SignupPage} />  
                     <Route path="/login" component={LoginPage} /> 
                     {/* <Redirect to="/" /> */}
