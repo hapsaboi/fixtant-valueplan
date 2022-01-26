@@ -36,7 +36,7 @@ function Header() {
     }
     return "Brand";
   };
-  const {userDetail,setUserDetail,getLoggedIn} = useAuth();
+  const {userDetail,getLoggedIn} = useAuth();
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>

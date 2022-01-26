@@ -23,6 +23,7 @@ function Notifications({details}) {
   
   useEffect(() => {
       notify('tr');
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [details]);
   
   return (

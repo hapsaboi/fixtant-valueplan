@@ -69,7 +69,7 @@ export default () => {
           {
             Icon: BriefcaseIcon,
             title: "Professionalism",
-            description: "We assure you that our templates are designed and created by professional designers.",
+            description: "We assure you that our professionals and we would always deliver on time.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}

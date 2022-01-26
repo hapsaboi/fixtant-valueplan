@@ -53,9 +53,9 @@ export default ({
     </>
   ),
   description = "Did you know you could cut repair costs in half? Our Value Plan relieves stress and anxiety for smart phone owners. Accidents happen. Sign up below and save thousands on your next phone repair. We are here to help.",
-  primaryActionUrl = "signup",
+  primaryActionUrl = "/signup",
   primaryActionText = "Sign Up",
-  secondaryActionUrl = "codeverify",
+  secondaryActionUrl = "/codeverify",
   secondaryActionText = "Insert Code"
 }) => {
   return (
@@ -67,7 +67,7 @@ export default ({
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
             <Actions>
-              <Link tp={primaryActionUrl} className="action primaryAction">
+              <Link to={primaryActionUrl} className="action primaryAction">
                 {primaryActionText}
               </Link>
               <Link to={secondaryActionUrl} className="action secondaryAction">

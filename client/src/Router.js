@@ -43,7 +43,7 @@ function RouterComp() {
                     <Route path="/codeverify" component={CodeVerify} /> 
                     <Route path="/signup" component={SignupPage} />  
                     <Route path="/login" component={LoginPage} /> 
-                    {/* <Redirect to="/" /> */}
+                    <Route component={ValuePlanLandingPage} /> 
                 </Switch>
             
             }          

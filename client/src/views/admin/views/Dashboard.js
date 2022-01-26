@@ -41,9 +41,8 @@ function Dashboard() {
               <Card.Footer>
                 <hr></hr>
                 <div className="stat">
-                  Welcome  - {userDetail.name}
-                  <h2>Nothing to show at the moment, please contact this number for more information: 
-                    <br />+234 704 859 8912
+                  Hello  - {userDetail.name}
+                  <h2>Welcome! Our team says thank you for signing up. Please contact the Fixtant CEO Dillon Onyemelukwe with the number +2347048598912 and he will walk you through the process.
                   </h2>
                 </div>
               </Card.Footer>

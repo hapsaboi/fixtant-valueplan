@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+//import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import TeamIllustrationSrc from "images/team-illustration-2.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
@@ -54,10 +54,10 @@ const FeatureHeading = tw.div`ml-3 font-bold text-xl`;
 
 const FeatureDescription = tw.div`mt-4 text-center md:text-left text-gray-600 leading-relaxed`;
 
-const PrimaryButton = styled(PrimaryButtonBase)(props => [
-  tw`mt-12 text-sm inline-block mx-auto md:mx-0`,
-  props.buttonRounded && tw`rounded-full`
-]);
+// const PrimaryButton = styled(PrimaryButtonBase)(props => [
+//   tw`mt-12 text-sm inline-block mx-auto md:mx-0`,
+//   props.buttonRounded && tw`rounded-full`
+// ]);
 
 export default ({
   subheading = "Our Expertise",
@@ -67,10 +67,10 @@ export default ({
     </>
   ),
   description = "This is not a service where your complaints will go unanswered. We truly care about your happiness and satisfaction with our company. That is why we aim for 100% claims processing. Nobody who has purchased our Value Plan and the time arises for them to receive their dues should be left wanting.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://myfixtant.com",
+  // primaryButtonText = "Learn More",
+  // primaryButtonUrl = "https://myfixtant.com",
   imageSrc = TeamIllustrationSrc,
-  buttonRounded = true,
+  //buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
@@ -134,9 +134,9 @@ export default ({
               ))}
             </Features>
 
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            {/* <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

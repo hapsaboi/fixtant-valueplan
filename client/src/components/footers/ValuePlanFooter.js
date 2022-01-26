@@ -17,7 +17,7 @@ const Row = tw.div`flex items-center justify-center flex-col px-8`
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
+//const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
 const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
@@ -40,11 +40,10 @@ export default () => {
             <LogoImg src={logo} style={{width:"250px"}}/>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">Home</Link>
+            <Link href="/ ">Home</Link>
             <Link href="#">About</Link>
-            <Link href="#">Schedule</Link>
-            <Link href="#">Book</Link>
-            <Link href="#">Reviews</Link>
+            <Link href="/signup">Sign Up</Link>
+            <Link href="/login">Login</Link>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">

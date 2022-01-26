@@ -22,7 +22,7 @@ function AuthContextProvider(props) {
 			window.localStorage.removeItem("token");
 			setLoggedIn(false);
 			setUserDetail({});
-			<Redirect to="/login" />;
+			<Redirect to="/"/>;
 		}else{
 			Axios.get(authenticate.getUserData).then((user)=>{
 				setLoggedIn(loggedInRes.data);
